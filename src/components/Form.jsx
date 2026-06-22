@@ -29,7 +29,6 @@ const Form = () => {
 
   const [errors, setErrors] = useState({});
 
-  
   useEffect(() => {
     return () => {
       if (formData.avatarPreview) {
@@ -126,7 +125,12 @@ const Form = () => {
 
         {/* Avatar Upload */}
         <div>
-          <h3 className="text-[hsl(252,6%,83%)] pb-3 text-[1.2rem]">Upload Avatar</h3>
+          <label
+            htmlFor="avatar-upload"
+            className="text-[hsl(252,6%,83%)] pb-3 text-[1.2rem] block"
+          >
+            Upload Avatar
+          </label>
           <label
             tabIndex={0}
             className={`flex flex-col items-center justify-center h-36 border-2 border-dashed bg-[hsl(249,50%,16%)] rounded-xl cursor-pointer transition-colors outline-none
@@ -134,6 +138,7 @@ const Form = () => {
             ${errors.avatar ? "border-red-400" : "border-[hsl(245,19%,35%)]"}`}
           >
             <input
+              id="avatar-upload"
               type="file"
               accept="image/*"
               className="hidden"
@@ -173,9 +178,9 @@ const Form = () => {
                   width={50}
                   className="border-[hsl(247,20%,26%)] bg-[hsl(247,20%,26%)] p-2.5 rounded-xl border-2 text-white outline-none focus:border-white transition-colors"
                 />
-                <p className="tracking-wider text-gray-400 pt-4 px-5 text-lg">
+                <span className="tracking-wider text-gray-400 pt-4 px-5 text-lg">
                   Drag and drop or click to upload
-                </p>
+                </span>
               </>
             )}
           </label>
@@ -187,8 +192,14 @@ const Form = () => {
 
         {/* First Name */}
         <div>
-          <h3 className="text-[hsl(252,6%,83%)] text-[1.2rem] pb-2 pt-1">First Name</h3>
+          <label
+            htmlFor="firstName"
+            className="text-[hsl(252,6%,83%)] text-[1.2rem] pb-2 pt-1 block"
+          >
+            First Name
+          </label>
           <input
+            id="firstName"
             type="text"
             name="firstName"
             value={formData.firstName}
@@ -200,8 +211,14 @@ const Form = () => {
 
         {/* Email */}
         <div>
-          <h3 className="text-[hsl(252,6%,83%)] text-[1.2rem] pb-2">Email Address</h3>
+          <label
+            htmlFor="email"
+            className="text-[hsl(252,6%,83%)] text-[1.2rem] pb-2 block"
+          >
+            Email Address
+          </label>
           <input
+            id="email"
             type="email"
             name="email"
             value={formData.email}
@@ -213,8 +230,14 @@ const Form = () => {
 
         {/* GitHub */}
         <div>
-          <h3 className="text-[hsl(252,6%,83%)] text-[1.2rem] pb-2">GitHub Username</h3>
+          <label
+            htmlFor="github"
+            className="text-[hsl(252,6%,83%)] text-[1.2rem] pb-2 block"
+          >
+            GitHub Username
+          </label>
           <input
+            id="github"
             type="text"
             name="github"
             value={formData.github}

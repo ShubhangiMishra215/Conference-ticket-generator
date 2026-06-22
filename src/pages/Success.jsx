@@ -10,7 +10,7 @@ const Success = () => {
   const { firstName, email, github, avatarPreview } = state;
 
   return (
-    <div className="py-10 px-6 flex flex-col justify-center items-center mb-45">
+    <main className="py-10 px-6 flex flex-col justify-center items-center mb-45">
       <Header
         title={
           <>
@@ -24,7 +24,7 @@ const Success = () => {
         }
         des={
           <>
-            We've emailed your ticket to <br className="hidden md:block" />
+            We&#39; emailed your ticket to <br className="hidden md:block" />
             <span className="text-[hsl(7,88%,67%)]/80">{email} </span>
             and will send updates in
             <br className="hidden md:block" />
@@ -76,7 +76,7 @@ const Success = () => {
           </div>
         </div>
       </div>
-    </div>
+    </main>
   );
 };
 
